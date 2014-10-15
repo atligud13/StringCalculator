@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -41,3 +42,18 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+=======
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+#*.jar
+*.war
+*.ear
+
+.DS_Store
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> 9b32128c4e24abf725b6ba78b4e2549c0454f7cb
