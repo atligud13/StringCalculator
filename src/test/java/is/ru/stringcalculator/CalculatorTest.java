@@ -39,4 +39,12 @@ public class CalculatorTest {
 	assertEquals(3, Calculator.add("//;\n1;2"));
 	}
 
+	@Test
+	public void testsNegative(){
+	try{
+		Calculator.add("-1,2");
+	}
+	catch(RuntimeException ex){
+	}
+	}
 }

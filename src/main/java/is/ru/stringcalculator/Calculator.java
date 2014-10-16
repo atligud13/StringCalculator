@@ -1,6 +1,7 @@
 package is.ru.stringcalculator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.ArrayList;
 
 public class Calculator {
 
@@ -31,8 +32,13 @@ public class Calculator {
 	}
       
     private static int sum(String[] numbers){
- 	    int total = 0;
-        for(String number : numbers){
+ 	    	int total = 0;
+		ArrayList<Integer> negatives = new ArrayList<Integer>(numbers.length);
+		for(String number : numbers){
+			if(toInt(number) < 0) negatives.add(toInt(number));
+		}
+		if(negatives.size() > 0) throw new RuntimeException();
+	        for(String number : numbers){
 		    total += toInt(number);
 		}
 		return total;
