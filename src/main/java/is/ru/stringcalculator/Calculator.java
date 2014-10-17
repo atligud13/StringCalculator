@@ -37,9 +37,10 @@ public class Calculator {
 		for(String number : numbers){
 			if(toInt(number) < 0) negatives.add(toInt(number));
 		}
-		if(negatives.size() > 0) throw new RuntimeException();
+		if(negatives.size() > 0) throw new RuntimeException("Negatives not allowed");
 	        for(String number : numbers){
-		    total += toInt(number);
+		    	total += toInt(number);
+			if(toInt(number) > 1000) total -= toInt(number);
 		}
 		return total;
     }

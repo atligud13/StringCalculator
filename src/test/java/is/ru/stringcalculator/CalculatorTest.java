@@ -42,9 +42,14 @@ public class CalculatorTest {
 	@Test
 	public void testsNegative(){
 	try{
-		Calculator.add("-1,2");
+	Calculator.add("-1,2");
 	}
 	catch(RuntimeException ex){
 	}
+	}
+
+	@Test
+	public void ignoreBiggerThan1000(){
+	assertEquals(2, Calculator.add("1001,2"));
 	}
 }
